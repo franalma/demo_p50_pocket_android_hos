@@ -1,0 +1,124 @@
+{
+  "app": {
+    "bundleName": "es.dtse.fam.huawei.demofoldable",
+    "vendor": "dtse",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "es.dtse.fam.huawei.demofoldable",
+    "name": ".MyApplication",
+    "mainAbility": "es.dtse.fam.huawei.demofoldable.WidgetAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "visible": true,
+        "name": "es.dtse.fam.huawei.demofoldable.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard",
+        "formsEnabled": true,
+        "forms": [
+          {
+            "landscapeLayouts": [
+              "$layout:form_grid_pattern_widget_2_2"
+            ],
+            "isDefault": false,
+            "scheduledUpdateTime": "10:30",
+            "defaultDimension": "2*2",
+            "name": "widget",
+            "description": "This is a service widget",
+            "colorMode": "auto",
+            "type": "Java",
+            "supportDimensions": [
+              "2*2"
+            ],
+            "portraitLayouts": [
+              "$layout:form_grid_pattern_widget_2_2"
+            ],
+            "updateEnabled": true,
+            "updateDuration": 1
+          }
+        ]
+      },
+      {
+        "name": "es.dtse.fam.huawei.demofoldable.WidgetAbility",
+        "icon": "$media:icon",
+        "description": "$string:widget_widgetability_description",
+        "formsEnabled": true,
+        "label": "$string:entry_WidgetAbility",
+        "type": "page",
+        "forms": [
+          {
+            "jsComponentName": "widget",
+            "metaData": {
+              "customizeData": [
+                {
+                  "name": "exteCoverFACard",
+                  "value": "es.dtse.fam.huawei.demofoldable"
+                }
+              ]
+            },
+            "isDefault": true,
+            "scheduledUpdateTime": "10:30",
+            "defaultDimension": "2*2",
+            "name": "qtz",
+            "description": "FAM FA",
+            "colorMode": "auto",
+            "type": "JS",
+            "supportDimensions": [
+              "2*2"
+            ],
+            "updateEnabled": true,
+            "updateDuration": 1
+          }
+        ],
+        "launchType": "singleton"
+      },
+      {
+        "name": "es.dtse.fam.huawei.demofoldable.AndroidServiceAbility",
+        "icon": "$media:icon",
+        "description": "Service widget",
+        "visible": true,
+        "type": "service"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": "widget",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        },
+        "type": "form"
+      }
+    ]
+  }
+}

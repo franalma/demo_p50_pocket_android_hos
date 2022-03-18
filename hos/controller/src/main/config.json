@@ -1,0 +1,37 @@
+{
+  "app": {
+    "bundleName": "es.dtse.fam.huawei.demofoldable",
+    "vendor": "dtse",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "es.dtse.fam.huawei.controller",
+    "name": ".MyApplication",
+    "mainAbility": "es.dtse.fam.huawei.controller.MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "controller",
+      "moduleType": "feature",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "orientation": "unspecified",
+        "visible": true,
+        "name": "es.dtse.fam.huawei.controller.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:controller_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven {url "http://artifactory.cde.huawei.com/artifactory/maven-public"
+            allowInsecureProtocol = true
+        }
+    }
+}
+rootProject.name = "P50MobileAppDemo"
+include ':app'

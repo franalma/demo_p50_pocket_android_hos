@@ -1,0 +1,27 @@
+{
+  "data": {
+    "isQtzType": false,
+    "title": "title",
+    "artist": "Singer",
+    "duration": "3:40"
+  },
+  "actions": {
+
+
+    "qtz_btn_next": {
+      "action": "message",
+      "abilityName": "es.dtse.fam.huawei.demofoldable.widget.WidgetAbility",
+      "params": {
+        "mAction": "btn_next"
+      }
+    },
+    "qtz_btn_pause": {
+      "action": "message",
+      "abilityName": "es.dtse.fam.huawei.demofoldable.widget.WidgetAbility",
+      "params": {
+        "mAction": "btn_pause"
+      }
+    }
+  }
+}
+

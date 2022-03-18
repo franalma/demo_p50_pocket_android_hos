@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "widget_title",
+      "value": "标题"
+    },
+    {
+      "name": "widget_introduction",
+      "value": "介绍"
+    },
+    {
+      "name": "music_widget_text",
+      "value": "你好，世界"
+    },
+    {
+      "name": "qtz_text",
+      "value": "你好，世界"
+    },
+    {
+      "name": "widget_widgetability_description",
+      "value": "这是一个WidgetAbility"
+    },
+    {
+      "name": "entry_WidgetAbility",
+      "value": "entry_WidgetAbility"
+    }
+  ]
+}

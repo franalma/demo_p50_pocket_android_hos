@@ -1,0 +1,20 @@
+<div>
+    <div>
+        <div class="card_root_layout">
+            <div class="qtz_title_container">
+                <text class="title">{{ title }}</text>
+            </div>
+            <div class="qtz_singer_container">
+                <text class="singer">{{ artist }}</text>
+            </div>
+            <div class="qtz_time_container">
+                <text class="time">{{ duration }}</text>
+            </div>
+            <div class="qtz_btn_container">
+                <image class="qtz_img img1" onclick="qtz_btn_next"/>
+                <image class="qtz_img img2" onclick="qtz_btn_pause"/>
+            </div>
+        </div>
+    </div>
+</div>
+

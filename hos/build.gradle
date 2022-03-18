@@ -1,0 +1,44 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.huawei.ohos.app'
+
+//For instructions on signature configuration, see https://developer.harmonyos.com/en/docs/documentation/doc-guides/ide_debug_device-0000001053822404#section1112183053510
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\Projects\\Demos\\DemoP50\\widget\\sign\\keytore.p12')
+            storePassword '00000018D4571D67527E430B3A19DA643BC8FED8AE8C69AB05CDB84418ED4191EE0947C5006D99BB'
+            keyAlias = 'key0'
+            keyPassword '000000183389959514C9649D19F8BBD964B3C21118B40369747D8890AA3DE9B81EF487DD506DA254'
+            signAlg = 'SHA256withECDSA'
+            profile file('D:\\Projects\\Demos\\DemoP50\\widget\\sign\\DemoP50Debug.p7b')
+            certpath file('D:\\Projects\\Demos\\DemoP50\\widget\\sign\\DemoP50.cer')
+        }
+    }
+    compileSdkVersion 7
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:3.0.5.2'
+        classpath 'com.huawei.ohos:decctest:1.2.7.2'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+    }
+}
