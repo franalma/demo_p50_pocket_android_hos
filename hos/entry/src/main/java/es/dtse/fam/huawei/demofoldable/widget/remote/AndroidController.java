@@ -19,7 +19,7 @@ public class AndroidController extends RemoteObject implements IRemoteBroker {
 
 
     public AndroidController(Ability ability) {
-        super("Game remote");
+        super("");
         this.ability = ability;
         connectToAndroidService();
 
@@ -28,6 +28,7 @@ public class AndroidController extends RemoteObject implements IRemoteBroker {
     private final IAbilityConnection connection = new IAbilityConnection() {
         @Override
         public void onAbilityConnectDone(ElementName elementName, IRemoteObject remote, int resultCode) {
+            System.out.println("-----onAbilityConnectDone:"+resultCode);
             remoteService = AndroidControllerStub.asInterface(remote);
         }
 
@@ -74,6 +75,7 @@ public class AndroidController extends RemoteObject implements IRemoteBroker {
 
     public void sendAction(String action){
         System.out.println("---->sendAction: "+action);
+        System.out.println("-----remoteService: "+remoteService);
         remoteService.action("000000", action);
 
     }

@@ -4,13 +4,13 @@ apply plugin: 'com.huawei.ohos.decctest'
 ohos {
     signingConfigs {
         debug {
-            storeFile file('D:\\Projects\\Demos\\DemoP50\\widget\\sign\\keytore.p12')
-            storePassword '00000018C5F676F094ACB713453FEE5C62881FADDF7FF6558BCC1C4B282B0F84E29BFE646163FBDF'
+            storeFile file('D:\\Projects\\Demos\\DemoP50-Android-HOS\\demo_p50_pocket_android_hos\\hos\\sign\\keytore.p12')
+            storePassword '000000187F168C2AF5BEFD1D6B3808DEC6D32915539C429C09589784319AA32454853D50CDC9399C'
             keyAlias = 'key0'
-            keyPassword '0000001815E1E3FD7EC3CBAD4B5590E01A7100EC13403B6A967281FA988D7BA4D176A1025E3ACF3A'
+            keyPassword '0000001838B8428A1D9901EF8FE9B5C371BC6AC2DF091811C41350709071B0F7EB6EDEE86E711DC6'
             signAlg = 'SHA256withECDSA'
-            profile file('D:\\Projects\\Demos\\DemoP50\\widget\\sign\\DemoP50Debug.p7b')
-            certpath file('D:\\Projects\\Demos\\DemoP50\\widget\\sign\\DemoP50.cer')
+            profile file('D:\\Projects\\Demos\\DemoP50-Android-HOS\\demo_p50_pocket_android_hos\\hos\\sign\\DemoP50Debug.p7b')
+            certpath file('D:\\Projects\\Demos\\DemoP50-Android-HOS\\demo_p50_pocket_android_hos\\hos\\sign\\DemoP50.cer')
         }
     }
     compileSdkVersion 7

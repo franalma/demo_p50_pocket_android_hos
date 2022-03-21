@@ -25,7 +25,6 @@ public abstract  class AndroidControllerStub extends RemoteObject implements IAn
         }else{
             return new AndroidControllerProxy(remoteObject);
         }
-
     }
 
     public boolean onRemoteRequest(int code, MessageParcel data, MessageParcel reply, MessageOption option) throws RemoteException {

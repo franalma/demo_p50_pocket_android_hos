@@ -3,15 +3,13 @@ package es.dtse.fam.huawei.demofoldable;
 import es.dtse.fam.huawei.demofoldable.widget.controller.FormController;
 import es.dtse.fam.huawei.demofoldable.widget.controller.FormControllerManager;
 import es.dtse.fam.huawei.demofoldable.widget.remote.AndroidController;
-import ohos.aafwk.ability.Ability;
-import ohos.aafwk.ability.AbilitySlice;
-import ohos.aafwk.ability.FormBindingData;
-import ohos.aafwk.ability.FormException;
-import ohos.aafwk.ability.ProviderFormInfo;
+import es.dtse.fam.huawei.demofoldable.widget.remote.HarmonyRemote;
+import ohos.aafwk.ability.*;
 import ohos.aafwk.content.IntentParams;
 import ohos.aafwk.content.Intent;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
+import ohos.rpc.IRemoteObject;
 import ohos.utils.zson.ZSONObject;
 
 /**
@@ -23,6 +21,8 @@ import ohos.utils.zson.ZSONObject;
  * FormController will be added and reflected by FormControllerManager.
  */
 public class WidgetAbility extends Ability {
+    private static AndroidController controllerRemote;
+    private HarmonyRemote hosRemote;
     /**
      * The service widget default dimension 2*2
      */
@@ -41,7 +41,6 @@ public class WidgetAbility extends Ability {
     public static final int INVALID_FORM_ID = -1;
     private static final HiLogLabel TAG = new HiLogLabel(HiLog.DEBUG, 0x0, WidgetAbility.class.getName());
     private String topWidgetSlice;
-    private static AndroidController androidController;
 
     @Override
     protected void onStart(Intent intent) {
@@ -54,18 +53,23 @@ public class WidgetAbility extends Ability {
                 setMainRoute(topWidgetSlice);
             }
         }
-        initAndroidController();
+//        initAndroidController();
     }
 
-    private void initAndroidController(){
-        androidController = new AndroidController(WidgetAbility.this);
-    }
+//    private void initAndroidController(){
+//        androidController = new AndroidController(WidgetAbility.this);
+//    }
 
 
 
     @Override
     protected ProviderFormInfo onCreateForm(Intent intent) {
         HiLog.info(TAG, "onCreateForm");
+
+        controllerRemote = new AndroidController(this);
+        hosRemote = new HarmonyRemote(this);
+
+
         long formId = intent.getLongParam(AbilitySlice.PARAM_FORM_IDENTITY_KEY, INVALID_FORM_ID);
         String formName = intent.getStringParam(AbilitySlice.PARAM_FORM_NAME_KEY);
         int dimension = intent.getIntParam(AbilitySlice.PARAM_FORM_DIMENSION_KEY, DEFAULT_DIMENSION_2X2);
@@ -160,4 +164,14 @@ public class WidgetAbility extends Ability {
         }
         return clazz.getName();
     }
+
+    @Override
+    public IRemoteObject onConnect(Intent intent) {
+        return hosRemote.asObject();
+    }
+
+    public static void doRemoteAction(String action) {
+        controllerRemote.sendAction(action);
+    }
+
 }

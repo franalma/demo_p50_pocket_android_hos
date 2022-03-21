@@ -33,39 +33,6 @@
             ]
           }
         ],
-        "orientation": "unspecified",
-        "visible": true,
-        "name": "es.dtse.fam.huawei.demofoldable.MainAbility",
-        "icon": "$media:icon",
-        "description": "$string:mainability_description",
-        "label": "$string:entry_MainAbility",
-        "type": "page",
-        "launchType": "standard",
-        "formsEnabled": true,
-        "forms": [
-          {
-            "landscapeLayouts": [
-              "$layout:form_grid_pattern_widget_2_2"
-            ],
-            "isDefault": false,
-            "scheduledUpdateTime": "10:30",
-            "defaultDimension": "2*2",
-            "name": "widget",
-            "description": "This is a service widget",
-            "colorMode": "auto",
-            "type": "Java",
-            "supportDimensions": [
-              "2*2"
-            ],
-            "portraitLayouts": [
-              "$layout:form_grid_pattern_widget_2_2"
-            ],
-            "updateEnabled": true,
-            "updateDuration": 1
-          }
-        ]
-      },
-      {
         "name": "es.dtse.fam.huawei.demofoldable.WidgetAbility",
         "icon": "$media:icon",
         "description": "$string:widget_widgetability_description",

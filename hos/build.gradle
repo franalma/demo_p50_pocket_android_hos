@@ -5,13 +5,13 @@ apply plugin: 'com.huawei.ohos.app'
 ohos {
     signingConfigs {
         debug {
-            storeFile file('D:\\Projects\\Demos\\DemoP50\\widget\\sign\\keytore.p12')
-            storePassword '00000018D4571D67527E430B3A19DA643BC8FED8AE8C69AB05CDB84418ED4191EE0947C5006D99BB'
+            storeFile file('D:\\Projects\\Demos\\DemoP50-Android-HOS\\demo_p50_pocket_android_hos\\hos\\sign\\keytore.p12')
+            storePassword '0000001833A9E4B6D7D7F62DDAC1C774DD4CDDA43A1D40DBF332FB193035FCDF3DDE320B0DD8E49E'
             keyAlias = 'key0'
-            keyPassword '000000183389959514C9649D19F8BBD964B3C21118B40369747D8890AA3DE9B81EF487DD506DA254'
+            keyPassword '000000185E9A17E8F232FFA844B3078A444C49880FBD7F8695FA9CBD1CCF7B424C81353B0F1F60C5'
             signAlg = 'SHA256withECDSA'
-            profile file('D:\\Projects\\Demos\\DemoP50\\widget\\sign\\DemoP50Debug.p7b')
-            certpath file('D:\\Projects\\Demos\\DemoP50\\widget\\sign\\DemoP50.cer')
+            profile file('D:\\Projects\\Demos\\DemoP50-Android-HOS\\demo_p50_pocket_android_hos\\hos\\sign\\DemoP50Debug.p7b')
+            certpath file('D:\\Projects\\Demos\\DemoP50-Android-HOS\\demo_p50_pocket_android_hos\\hos\\sign\\DemoP50.cer')
         }
     }
     compileSdkVersion 7

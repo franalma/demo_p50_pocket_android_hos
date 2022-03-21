@@ -1,6 +1,5 @@
 package es.dtse.fam.huawei.demofoldable.widget.qtz;
 
-import es.dtse.fam.huawei.demofoldable.MainAbility;
 import es.dtse.fam.huawei.demofoldable.WidgetAbility;
 import es.dtse.fam.huawei.demofoldable.widget.controller.FormController;
 import ohos.aafwk.ability.*;
@@ -41,13 +40,13 @@ public class QtzImpl extends FormController implements PlayerDelegate{
         PlayItem.getInstance().setDelegate(this);
         ZSONObject zsonObject = ZSONObject.stringToZSON(message);
         this.formId = formId;
-        System.out.println("----onTriggerFormEvent");
+        System.out.println("----> QTZimpl onTriggerFormEvent");
         switch (zsonObject.getString("mAction")) {
             case BTN_NEXT:
-                MainAbility.doRemoteAction("play");
+                WidgetAbility.doRemoteAction("play");
                 break;
             case BTN_PAUSE:
-                MainAbility.doRemoteAction("stop");
+                WidgetAbility.doRemoteAction("stop");
                 break;
             default:
                 break;

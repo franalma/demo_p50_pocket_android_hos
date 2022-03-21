@@ -38,10 +38,4 @@ public class EntryPointService extends Service {
         MusicPlayer.getInstance().initHosCommunication(getBaseContext());
         return (IBinder) iAndroidController;
     }
-
-
-
-
-
-
 }
